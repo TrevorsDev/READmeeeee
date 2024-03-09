@@ -5,7 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = [
     {
-        // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+        
         type: 'input',
         name: 'title',
         message: 'Please provide a title to your READme.md'
@@ -38,7 +38,7 @@ const questions = [
     {
         type: 'input',
         name: 'license',
-        message: 'Please provide any lisecenses for your application. This lets other developers know what they can and cannot do with your project.'
+        message: 'Please provide any licenses for your application. This lets other developers know what they can and cannot do with your project.'
     },
     {
         type: 'input',
