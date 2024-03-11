@@ -1,11 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMD')
 // TODO: Create an array of questions for user input
 const questions = [
     {
-        
+
         type: 'input',
         name: 'title',
         message: 'Please provide a title to your READme.md'
@@ -13,17 +13,7 @@ const questions = [
     {
         type: 'input',
         name: 'discription',
-        message: `Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-        - What was your motivation?
-        - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-        - What problem does it solve?
-        - What did you learn?`
-    },
-    {
-        type: 'input',
-        name: 'tableOfContents',
-        message: 'Show us around by writing your table of contents. (Optional)'
+        message: `Provide a short description of your project. Include screenshots as needed.`
     },
     {
         type: 'input',
@@ -36,26 +26,38 @@ const questions = [
         message: 'Provide instructions and examples of how to use your application. Include screenshots as needed.'
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: 'Please provide any licenses for your application. This lets other developers know what they can and cannot do with your project.'
+        message: 'Please provide any licenses for your application. This lets other developers know what they can and cannot do with your project.',
+        choices: [
+            'Apache License 2.0',
+            'GNU General Public License v3.0',
+            'MIT License',
+            'Mozilla Public License 2.0',
+            'none']
     },
     {
         type: 'input',
         name: 'contributors',
-        message: `List your collaborators, if any, with links to their GitHub profiles.
-
-        If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-        
-        If you followed tutorials, include links to those here as well.`
+        message: `List your collaborators, if any, with links to their GitHub profiles.`
     },
     {
         type: 'input',
         name: 'tests',
         message: 'Provide examples on how to test your application. Include screenshots as needed.'
+    },
+    {
+        type: 'input',
+        name: 'Github',
+        message: 'Provide your GitHub username.'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Provide your email.'
     }
 
-]; 
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
