@@ -36,7 +36,7 @@ function generateMarkdown(answers) {
 ${renderLicenseBadge(answers.license)}
 
 ## Discription
-### ${answers.discription}
+${answers.discription}
 
 ## Table of Contents
 
@@ -47,20 +47,21 @@ ${renderLicenseLink(answers.license)}
 - [contributors](#contributors)
 
 ## Installation Processes
-### ${answers.installation}
+${answers.installation}
 
 ## App Usage
-### ${answers.usage}
+${answers.usage}
 
 ${renderLicenseSection(answers.license)}
 
 ## Contributors
-### ${answers.contributors}
+${answers.contributors}
+
 ## Testing
-### ${answers.tests}
+${answers.tests}
 
 ## Questions
-### If you have any questions about the repo, open an issue or contact me directly at ${answers.email}. If youwant to see more of my work, please visit my [${answers.Github}](https://github.com/${answers.Github})
+If you have any questions about the repo, open an issue or contact me directly at ${answers.email}. If you want to see more of my work, please visit my [${answers.Github}](https://github.com/${answers.Github})
 `;
 }
 
